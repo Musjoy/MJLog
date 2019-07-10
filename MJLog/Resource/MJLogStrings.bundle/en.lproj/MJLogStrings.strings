@@ -1,0 +1,13 @@
+/* 
+  MJLogStrings.strings
+  MJLog
+
+  Created by xd on 2019/7/8.
+  Copyright © 2019 XDD2333. All rights reserved.
+*/
+"share_logs" = "Share Logs";
+"today" = "Today";
+"last_3_days" = "Last 3 days";
+"last_7_days" = "Last 7 days";
+"last_10_days" = "Last 10 days";
+"log_enable" = "Log enable";

@@ -1,0 +1,6 @@
+framework module MJLog {
+  umbrella header "MJLog-umbrella.h"
+
+  export *
+  module * { export * }
+}

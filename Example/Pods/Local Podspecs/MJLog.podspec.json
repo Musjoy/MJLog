@@ -1,0 +1,47 @@
+{
+  "name": "MJLog",
+  "version": "0.1.0",
+  "summary": "A short description of MJLog.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Musjoy/MJLog",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "xdong90": "dong.xia@musjoy.com"
+  },
+  "source": {
+    "git": "https://github.com/Musjoy/MJLog.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "MJLog/Classes/**/*",
+  "vendored_frameworks": "MJLog/Framework/mars.framework",
+  "resources": [
+    "MJLog/Resource/MJLogStrings.bundle",
+    "MJLog/Resource/decode_mars_nocrypt_log_file.py"
+  ],
+  "user_target_xcconfig": {
+    "GCC_PREPROCESSOR_DEFINITIONS": "MODULE_LOG"
+  },
+  "dependencies": {
+    "ModuleCapability": [
+
+    ],
+    "SSZipArchive": [
+      "~> 2.2.2"
+    ]
+  },
+  "frameworks": [
+    "UIKit",
+    "SystemConfiguration",
+    "CoreTelephony"
+  ],
+  "libraries": [
+    "resolv.9",
+    "z"
+  ]
+}

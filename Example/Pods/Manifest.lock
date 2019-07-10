@@ -1,0 +1,28 @@
+PODS:
+  - MJLog (0.1.0):
+    - ModuleCapability
+    - SSZipArchive (~> 2.2.2)
+  - ModuleCapability (0.1.12)
+  - SSZipArchive (2.2.2)
+
+DEPENDENCIES:
+  - MJLog (from `../`)
+
+SPEC REPOS:
+  "git@git.musjoy.com:PodSpecs.git":
+    - ModuleCapability
+  https://github.com/cocoapods/specs.git:
+    - SSZipArchive
+
+EXTERNAL SOURCES:
+  MJLog:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MJLog: e368d62651a84640fe6a0493b5ff73a1c5e52cc5
+  ModuleCapability: 0a305c0db501f72531def9b5da08c8d1173ccbbb
+  SSZipArchive: fa16b8cc4cdeceb698e5e5d9f67e9558532fbf23
+
+PODFILE CHECKSUM: 248a65300e76aeb57fdaddf10178c0e792ad5e8a
+
+COCOAPODS: 1.6.1

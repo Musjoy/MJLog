@@ -1,0 +1,6 @@
+framework module Pods_MJLog_Tests {
+  umbrella header "Pods-MJLog_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

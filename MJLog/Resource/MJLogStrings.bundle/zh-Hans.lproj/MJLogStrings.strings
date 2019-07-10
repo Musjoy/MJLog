@@ -1,0 +1,13 @@
+/* 
+  MJLogStrings.strings
+  MJLog
+
+  Created by xd on 2019/7/8.
+  Copyright © 2019 XDD2333. All rights reserved.
+*/
+"share_logs" = "分享日志";
+"today" = "今天";
+"last_3_days" = "近3天";
+"last_7_days" = "近7天";
+"last_10_days" = "近10天";
+"log_enable" = "开启日志";
