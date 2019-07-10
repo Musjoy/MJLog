@@ -16,6 +16,7 @@
 #import <mars/xlog/appender.h>
 #import <SSZipArchive/SSZipArchive.h>
 
+#import <ModuleCapability/ModuleCapability.h>
 #ifdef HEADER_CONTROLLER_MANAGER
 #import HEADER_CONTROLLER_MANAGER
 #endif
