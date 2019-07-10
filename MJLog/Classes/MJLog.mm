@@ -16,6 +16,10 @@
 #import <mars/xlog/appender.h>
 #import <SSZipArchive/SSZipArchive.h>
 
+#ifdef HEADER_CONTROLLER_MANAGER
+#import HEADER_CONTROLLER_MANAGER
+#endif
+
 static NSString *kLogPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingString:@"/log"];
 
 static NSString *const kMJLogConfigKey = @"com.mjlog.config.main";
