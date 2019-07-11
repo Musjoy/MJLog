@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MJLog'
-  s.version          = '0.1.3'
+  s.version          = '0.1.2'
   s.summary          = 'A short description of MJLog.'
 
 # This description is used to generate tags and improve search results.
@@ -36,7 +36,7 @@ TODO: Add long description of the pod here.
     'GCC_PREPROCESSOR_DEFINITIONS' => 'MODULE_LOG'
   }
   
-  s.dependency 'ModuleCapability', '~> 0.1.12'
+  s.dependency 'ModuleCapability'
   s.frameworks = 'UIKit', 'SystemConfiguration', 'CoreTelephony'
   s.libraries = 'resolv.9','z'
   s.dependency 'SSZipArchive', '~> 2.2.2'
