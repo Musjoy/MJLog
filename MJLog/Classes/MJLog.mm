@@ -262,7 +262,7 @@ static NSString *const kMJLogConsoleLogEnable = @"com.mjlog.config.consolelog";
     return [MJControllerManager topNavViewController];
 #else
     UIViewController *topVC = nil;
-    
+
     // Find the top window (that is not an alert view or other window)
     UIWindow *topWindow = [[UIApplication sharedApplication] keyWindow];
     if (topWindow.windowLevel != UIWindowLevelNormal) {
@@ -272,10 +272,10 @@ static NSString *const kMJLogConsoleLogEnable = @"com.mjlog.config.consolelog";
                 break;
         }
     }
-    
+
     UIView *rootView = [[topWindow subviews] objectAtIndex:0];
     id nextResponder = [rootView nextResponder];
-    
+
     if ([nextResponder isKindOfClass:[UIViewController class]]) {
         topVC = nextResponder;
     } else if ([topWindow respondsToSelector:@selector(rootViewController)] && topWindow.rootViewController != nil) {
@@ -283,7 +283,7 @@ static NSString *const kMJLogConsoleLogEnable = @"com.mjlog.config.consolelog";
     } else {
         NSAssert(NO, @"Could not find a root view controller.");
     }
-    
+
     UIViewController *presentVC = topVC.presentedViewController;
     while (presentVC) {
         topVC = presentVC;
@@ -305,9 +305,19 @@ static NSString *const kMJLogConsoleLogEnable = @"com.mjlog.config.consolelog";
     if (!zipUrl) {
         return NO;
     }
+    UIViewController *top = [self topViewController];
+    UIView *view = top.view;
+    if ([top isKindOfClass:[UINavigationController class]]) {
+        UINavigationController *nav = (UINavigationController *)top;
+        view = nav.viewControllers[0].view;
+    }
     
-    UIActivityViewController *activituVC = [[UIActivityViewController alloc]initWithActivityItems:@[zipUrl] applicationActivities:nil];
-    [[self topViewController] presentViewController:activituVC animated:YES completion:nil];
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:@[zipUrl] applicationActivities:nil];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        activityVC.popoverPresentationController.sourceView = view;
+        activityVC.popoverPresentationController.sourceRect = activityVC.popoverPresentationController.sourceView.bounds;
+    }
+    [top presentViewController:activityVC animated:YES completion:nil];
     
     return YES;
 }
